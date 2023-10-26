@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../database/models/UsersModel');
 const { v4: uuidv4 } = require('uuid');
 const nodemailer = require('nodemailer');
-const axios = require ('axios')
+// const axios = require ('axios')
 const crypto = require('crypto');
 
 
