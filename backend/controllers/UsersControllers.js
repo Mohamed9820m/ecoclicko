@@ -177,7 +177,7 @@ const forget = async (req,res)=>{
     
         <p style="color: #555;">To reset your password, please click on the link below:</p>
     
-        <a href="https://ecoclicko.onrender.com/reset-password/${resetToken}" style="background-color: #009e00; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px;">Click here to reset your password</a>
+        <a href="https://ecoclicko.info/reset-password/${resetToken}" style="background-color: #009e00; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 20px;">Click here to reset your password</a>
       </div>
     </div>
       `
