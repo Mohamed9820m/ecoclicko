@@ -67,7 +67,7 @@ const loginUser = async (req, res) => {
     });
 
     res.cookie('token', token, {
-      httpOnly: true,
+      httpsOnly: true,
       maxAge: 3600000,
     });
 
@@ -128,7 +128,7 @@ const verifyuser = async (req, res) => {
     const token = generateToken(user);
 
     res.cookie('token', token, {
-      httpOnly: true,
+      httpsOnly: true,
       maxAge: 3600000,
     });
 

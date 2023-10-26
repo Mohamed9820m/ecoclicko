@@ -31,7 +31,7 @@ module.exports = {
       const options= {
         expires: new Date(exp),
 
-        httpOnly: true,
+        httpsOnly: true,
         sameSite: "lax"
       }
        res.cookie("Authorization", jwtToken, options);
