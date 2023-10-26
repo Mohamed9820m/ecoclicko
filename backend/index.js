@@ -37,6 +37,6 @@ sequelize.sync() // You may use { force: true } to drop and recreate tables
   console.error('Error syncing database:', err);
 });
 // Start the server
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Server is running on port ${port}`);
 });
