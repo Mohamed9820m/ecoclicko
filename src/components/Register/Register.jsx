@@ -86,7 +86,7 @@ function Register() {
         image: responseImageUpload.data.secure_url,
       };
 
-      const responseUserRegister = await axios.post('http://127.0.0.1:5000/api/Users/register', user);
+      const responseUserRegister = await axios.post('https://ecoclicko.onrender.com/api/Users/register', user);
 
       console.log('Registration successful!');
       navigate('/login');

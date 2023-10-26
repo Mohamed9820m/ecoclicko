@@ -24,7 +24,7 @@ function OneBlog() {
   }, []);
   const fetchComments = () => {
     axios
-      .get(`http://127.0.0.1:5000/api/Comments/getComments/${id}`)
+      .get(`https://ecoclicko.onrender.com/api/Comments/getComments/${id}`)
       .then((result) => {
         setComments(result.data);
       })
@@ -34,7 +34,7 @@ function OneBlog() {
   };
   const fetchOneBlog = () => {
     axios
-      .get(`http://127.0.0.1:5000/api/Blog/getone/${id}`)
+      .get(`https://ecoclicko.onrender.com/api/Blog/getone/${id}`)
       .then((result) => {
         setOneBlog(result.data);
       })

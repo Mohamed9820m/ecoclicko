@@ -30,7 +30,7 @@ function Profile() {
         console.log(userId)
   
         axios
-          .get(`http://127.0.0.1:5000/api/Users/oneUser/${userId}`, {
+          .get(`https://ecoclicko.onrender.com/api/Users/oneUser/${userId}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -63,7 +63,7 @@ function Profile() {
           preConfirm: (newName) => {
             if (newName) {
                 console.log('userId',id)
-              const apiUrl = `http://127.0.0.1:5000/api/Users/users/${id}/update-username`;
+              const apiUrl = `https://ecoclicko.onrender.com/api/Users/users/${id}/update-username`;
       
               axios
                 .put(apiUrl, { newUsername: newName })
@@ -102,7 +102,7 @@ function Profile() {
       
             if (newPassword && confirmPassword) {
               if (newPassword === confirmPassword) {
-                const apiUrl = `http://127.0.0.1:5000/api/Users/users/${id}/update-password`;
+                const apiUrl = `https://ecoclicko.onrender.com/api/Users/users/${id}/update-password`;
       
                 axios
                   .put(apiUrl, { newPassword: newPassword })
@@ -138,7 +138,7 @@ function Profile() {
             confirmButtonText: 'Update',
             preConfirm: (newBio) => {
               if (newBio) {
-                const apiUrl = `http://127.0.0.1:5000/api/Users/users/${id}/update-bio`;
+                const apiUrl = `https://ecoclicko.onrender.com/api/Users/users/${id}/update-bio`;
       
                 axios
                   .put(apiUrl, { newBio: newBio })
@@ -176,7 +176,7 @@ function Profile() {
                 .then((response) => {
                   const newImageUrl = response.data.secure_url;
         
-                  const apiUrl = `http://127.0.0.1:5000/api/Users/users/${id}/update-image`;
+                  const apiUrl = `https://ecoclicko.onrender.com/api/Users/users/${id}/update-image`;
         
                   axios
                     .put(apiUrl, { newImage: newImageUrl })
@@ -229,7 +229,7 @@ function Profile() {
               cancelButtonColor: '#3085d6',
             }).then((result) => {
               if (result.isConfirmed) {
-                const apiUrl = `http://127.0.0.1:5000/api/Users/users/${id}/delete`;
+                const apiUrl = `https://ecoclicko.onrender.com/api/Users/users/${id}/delete`;
                 axios
                   .delete(apiUrl)
                   .then((response) => {

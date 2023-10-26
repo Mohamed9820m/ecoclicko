@@ -28,7 +28,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/Users/login', {
+      const response = await axios.post('https://ecoclicko.onrender.com/api/Users/login', {
         userEmail,
         userPassword,
       });
@@ -102,7 +102,7 @@ function Login() {
 
     if (email) {
       try {
-        const response = await axios.post('http://127.0.0.1:5000/api/Users/forgot-password', {
+        const response = await axios.post('https://ecoclicko.onrender.com/api/Users/forgot-password', {
           userEmail: email
         });
 

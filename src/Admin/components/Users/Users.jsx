@@ -20,7 +20,7 @@ function Users() {
         fetchUsers()
     },[])
     const fetchUsers=()=>{
-        axios.get('http://127.0.0.1:5000/api/Users/getAllUsers')
+        axios.get('https://ecoclicko.onrender.com/api/Users/getAllUsers')
         .then(result=>{
             setUsers(result.data)
         })
@@ -31,7 +31,7 @@ function Users() {
         "Are you sure you want to delete this comment?"
       );
       if (shouldDelete) {
-        axios.delete(`http://127.0.0.1:5000/api/Users/deleteUser${id}`)
+        axios.delete(`https://ecoclicko.onrender.com/api/Users/deleteUser${id}`)
         .then(()=>{window.location.reload();})
       }
     }

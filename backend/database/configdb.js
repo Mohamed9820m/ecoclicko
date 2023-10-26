@@ -1,11 +1,11 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config()
 const sequelize = new Sequelize(
-  "bfvca6vlsd5qqhcsejfq",
-  "ue5o0lh5dkva8vzb",
-  "63YDeMo84iAlXAd3SVS8",
+  "bxczp0dljion9hvw6vap",
+  "uvrb3dqyyar4r2ux",
+  "6NySdNKWysGOJfNMG3iT",
   {
-    host: "bfvca6vlsd5qqhcsejfq-mysql.services.clever-cloud.com",
+    host: "bxczp0dljion9hvw6vap-mysql.services.clever-cloud.com",
     dialect: 'mysql',
     define: {
       timestamps: false,

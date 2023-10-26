@@ -45,7 +45,7 @@ function AddBlog() {
       if (response.ok) {
         const data = await response.json();
         
-        axios.post("http://localhost:5000/api/blog/addBlog/1", {
+        axios.post("https://ecoclicko.onrender.com/api/blog/addBlog/1", {
           blogTitle,
           blogContent,
           blogImage: data.secure_url,

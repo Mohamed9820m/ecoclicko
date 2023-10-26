@@ -21,7 +21,7 @@ function LoginAdmin() {
     const passwordInputType = showPassword ? 'text' : 'password';
     const handleLogin = async () => {
         try{
-            const response =await axios.get("http://127.0.0.1:5000/api/Admin")
+            const response =await axios.get("https://ecoclicko.onrender.com/api/Admin")
             const data=response.data[0]
             data.adminEmail===userEmail&&data.adminPassword===userPassword?navigate('/dashboard'):Swal.fire({
                 icon: 'warning',

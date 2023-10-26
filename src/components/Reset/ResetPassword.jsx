@@ -18,7 +18,7 @@ const ResetPasswordPage = () => {
     }
 
     try {
-      const response = await axios.post(`http://127.0.0.1:5000/api/Users/reset-password/${resetToken}`, {
+      const response = await axios.post(`https://ecoclicko.onrender.com/api/Users/reset-password/${resetToken}`, {
         newPassword
       });
 

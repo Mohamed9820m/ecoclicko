@@ -8,7 +8,7 @@ function Comments() {
     const [reload, setReload] = useState(false);
 
     useEffect(()=>{
-        axios.get('http://127.0.0.1:5000/api/Comments/getCommentsToAdmin')
+        axios.get('https://ecoclicko.onrender.com/api/Comments/getCommentsToAdmin')
         .then(result=>{
             setAllComments(result.data)
         })
@@ -22,12 +22,12 @@ function Comments() {
         );
         if (shouldDelete) {
           axios
-            .delete(`http://localhost:5000/api/Comments/deleteComment/${commentId}`)
+            .delete(`https://ecoclicko.onrender.com/api/Comments/deleteComment/${commentId}`)
             .then(() => setReload(!reload));
         }
       }
       const approveComment=(commentId)=>{
-        axios.put(`http://localhost:5000/api/Comments/approveComment/${commentId}`)
+        axios.put(`https://ecoclicko.onrender.com/api/Comments/approveComment/${commentId}`)
         .then(() => setReload(!reload));
     }
   return (

@@ -19,7 +19,7 @@ const ProductCard = () => {
     //     amount: amount.toString()
     //   };
     //   try {
-    //     const response = await axios.post('http://localhost:5000/api/users/payement', payload);
+    //     const response = await axios.post('https://ecoclicko.onrender.com/api/users/payement', payload);
     //     setPayeToken(response.data.data.token);
     //     console.log('Response:', response.data.data.token);
     //     console.log('Amount:', amount);
@@ -84,7 +84,7 @@ const ProductCard = () => {
               phone,
             };
     
-            axios.post('http://127.0.0.1:5000/api/Users/Reservation', reservationData)
+            axios.post('https://ecoclicko.onrender.com/api/Users/Reservation', reservationData)
               .then((response) => {
                 if (response.status === 200) {
                   Swal.fire('Thank you for proceeding', '', 'success');

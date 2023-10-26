@@ -24,13 +24,13 @@ function ReadingComments({ commntes, user_id, setReload, reload  }) {
     );
     if (shouldDelete) {
       axios
-        .delete(`http://localhost:5000/api/Comments/deleteComment/${commentId}`)
+        .delete(`https://ecoclicko.onrender.com/api/Comments/deleteComment/${commentId}`)
         .then(() => setReload(!reload));
     }
   };
   const updateComment = (commentId) => {
     axios
-      .put(`http://localhost:5000/api/Comments/update/${commentId}`, {
+      .put(`https://ecoclicko.onrender.com/api/Comments/update/${commentId}`, {
         comment: newComment,
       })
       .then(() => {

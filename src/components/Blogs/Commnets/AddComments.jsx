@@ -13,7 +13,7 @@ function AddComments({blogId,user_id, setReload, reload}) {
     } else {
       axios
         .post(
-          `http://127.0.0.1:5000/api/Comments/addComment/${blogId}/${user_id}`,
+          `https://ecoclicko.onrender.com/api/Comments/addComment/${blogId}/${user_id}`,
           { comment: comment }
         )
         .then(() => setReload(!reload))

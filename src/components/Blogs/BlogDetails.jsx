@@ -21,7 +21,7 @@ function BlogDetails({ data,setReload,relode }) {
 
   const deleteBlog=(blogId)=>{
     const showDelete=window.confirm(  "Are you sure you want to delete this comment?")
-    showDelete? axios.delete(`http://127.0.0.1:5000/api/Blog/deleteBlog${blogId}`)
+    showDelete? axios.delete(`https://ecoclicko.onrender.com/api/Blog/deleteBlog${blogId}`)
     .then(()=>setReload(!relode))
     .catch((err)=>{console.log(err)}):alert('There seems to be a problem, try again please!')
   }

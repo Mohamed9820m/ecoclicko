@@ -9,7 +9,7 @@ function Like({ idBlog, user_id }) {
   useEffect(() => {
     const fetchLikeStatus =() => {
     
-        axios.get(`http://localhost:5000/api/Likes/getLike/${idBlog}/${user_id}`)
+        axios.get(`https://ecoclicko.onrender.com/api/Likes/getLike/${idBlog}/${user_id}`)
   .then((result) => {
     console.log(result.data);
     if (result.data.length === 0) {
@@ -38,20 +38,20 @@ fetchLikeStatus()
 
   const like = () => {
     axios
-      .post(`http://localhost:5000/api/Likes/like/${idBlog}/${user_id}`)
+      .post(`https://ecoclicko.onrender.com/api/Likes/like/${idBlog}/${user_id}`)
       .then(() => setLiked(true))
       .catch(err => console.log(err));
   };
 
   const dislike = () => {
     axios
-      .delete(`http://localhost:5000/api/Likes/dislike/${idBlog}/${user_id}`)
+      .delete(`https://ecoclicko.onrender.com/api/Likes/dislike/${idBlog}/${user_id}`)
       .then(() => setLiked(false))
       .catch(err => console.log(err));
   };
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/Likes/getOneLike/${idBlog}`)
+      .get(`https://ecoclicko.onrender.com/api/Likes/getOneLike/${idBlog}`)
       .then((result) => {
         setLikeNumber(result.data.length);
       })

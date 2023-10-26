@@ -14,7 +14,7 @@ export default function ActivationEmail() {
 
   useEffect(() => {
     axios
-      .post(`http://127.0.0.1:5000/api/Users/verify/${activationcode}`)
+      .post(`https://ecoclicko.onrender.com/api/Users/verify/${activationcode}`)
       .then((response) => {
         console.log(response)
         const { token } = response.data;

@@ -9,7 +9,7 @@ const Blogs = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:5000/api/Blog/getAll');
+      const res = await axios.get('https://ecoclicko.onrender.com/api/Blog/getAll');
       setData(res.data);
     } catch (err) {
       console.error(err);

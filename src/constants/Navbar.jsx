@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 
 const fetchUserImage = async (userId) => {
   try {
-    const response = await axios.get(`http://127.0.0.1:5000/api/Users/oneUser/${userId}`);
+    const response = await axios.get(`https://ecoclicko.onrender.com/api/Users/oneUser/${userId}`);
     return response.data.image; 
   } catch (error) {
     console.error('Error fetching user image:', error);

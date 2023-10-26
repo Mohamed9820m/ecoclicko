@@ -30,7 +30,7 @@ function UpdateBlog({blogId}) {
     }
   
     const putBlog=()=>{
-        axios.put(`http://127.0.0.1:5000/api/blog/update/${blogId}`,{
+        axios.put(`https://ecoclicko.onrender.com/api/blog/update/${blogId}`,{
             blogTitle,
             blogContent,
             blogImage,
