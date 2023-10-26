@@ -1,0 +1,25 @@
+.avatar-img-circle {
+  width: 160px  ;
+  height: 160px ;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+
+/* TO FIX */
+.profile-body{
+  margin-top : -250px !important
+}
+
+.param{
+  background-color: transparent;
+  color: black;
+  border: none;
+  margin-top: -75px;
+  margin-left: 95px;
+}
+
+.param:hover{
+  background-color: transparent;
+  color : rgb(164, 160, 160)
+}

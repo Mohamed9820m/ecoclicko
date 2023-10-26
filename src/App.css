@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&display=swap');
+
+:root {
+  --green: #009e00;
+  --black: #000000;
+  --darkgray: #282828;
+  --orange: #fa4f07;
+  --white: #ffffff;
+  --lightGray : #f7f7f7;
+}
+
+.mainBtn {
+  font-size: 15px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  display: inline-block;
+  padding: 1em 1.2em;
+  background-color: var(--green);
+  color: #fff;
+  letter-spacing: .5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px var(--green, 0.5);
+  z-index: 1;
+}
+
+.font-bebas {
+
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.font-kanit {
+
+  font-family: 'Kanit', sans-serif;
+}
+.btn-scrollTop {
+    width: 44px;
+    height: 30px;
+    border: none;
+    background-color: var(--white);
+}
+
+
+body {
+  font-family: 'Kanit', sans-serif!important;
+}
+.navbar-toggler {
+  background-color: transparent!important;
+  border: 0!important;
+  border-radius: 0%!important;
+  outline: none!important;
+  outline-width: 0!important;
+}
+
+.navbar-toggler-icon {
+  background-image: url('./assets/small-icons/menu.png')!important;
+}
+.btn-close {
+  --bs-btn-close-bg: url('./assets/small-icons/close.png')!important;
+  --bs-btn-close-opacity: 1!important;
+  width: 2em!important;
+  height: 2em!important;
+}
+.nav-link:hover {
+    border-bottom: 1px solid var(--green);
+    transition: 5s ease-in-out;
+}
+.navbar-style {
+    background-color: var(--white);
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .nav-icons{
+    margin-right: 3rem;
+  }
+  .navbarLinks-color {
+    color: var(--darkgray);
+    font-size: 18px;
+    margin: 0px 3px;
+  }
+  .dropdown-menu {
+    --bs-dropdown-spacer: 1.57em!important;
+    --bs-dropdown-border-radius: none!important;
+    --bs-dropdown-min-width: 3rem!important;
+  }
+
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .textOrange{
+    color: var(--orange);
+  }
+
+  .hero-landing {
+    height: 100vh; /* Set the height to 100% of the viewport height */
+  }
+  
+  .btn-m {
+    background-color: var(--green);
+    border: 1 solid var(--green);
+    border-radius: 5px;
+    padding: 0px 5px;
+  }
+  
+  .mainBtn {
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    padding: 1em 1.2em;
+    background-color: var(--green);
+    color: #fff;
+    letter-spacing: .5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px var(--green, 0.5);
+    z-index: 1;
+  }
+  
+  .mainBtn:focus {
+    outline: 0;
+  }
+  
+  .mainBtn:before,
+  .mainBtn:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+  
+  .mainBtn:before {
+    display: none;
+    top: -75%;
+    background-image: radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--green) 20%, transparent 30%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--green) 15%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  }
+  
+  .mainBtn:after {
+    display: none;
+    bottom: -75%;
+    background-image: radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--green) 15%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%), radial-gradient(circle, var(--green) 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+  }
+  
+  .mainBtn:active {
+    transform: scale(0.9);
+    background-color: #358f38;
+    box-shadow: 0 2px 25px rgba(9, 255, 0, 0.2);
+  }
+  
+  .mainBtn.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+  }
+  
+  .mainBtn.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+  }
+  
+  @keyframes topBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  @keyframes bottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+
+
+  /* ------------------------ Landing Page Hero CSS ---------------------- */
+  /* --------------------------------------------------------------------- */
+  .row-lp-sc{
+    height:100%;
+    margin:auto;
+  }
+  
+.left-heading{
+  font-weight:700;
+  color:#273342;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.left-paragraph{
+  color:gray;
+  padding-left:5px;
+  margin-top:20px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.left-column{
+  background-color:#fff;
+  float: left;
+  width: 50%;
+  padding: 25px;
+  align-items:center;
+  vertical-align:center;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  
+}
+/* Create two equal columns that floats next to each other */
+.right-column {
+/*   background-image:url('https://cdni.iconscout.com/illustration/premium/thumb/online-job-search-4836622-4032953.png');
+ */  object-fit:cover;
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  align-items:center;
+  vertical-align:center;
+  height: 100vh; /* Should be removed. Only for demonstration */
+  border-radius: 25px;
+  
+}
+
+.p15 {
+  padding-top: 15%;
+}
+
+/* Clear floats after the columns */
+.row-lp-sc:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .left-column{
+    width: 100%;
+    height:auto;
+  }
+  .right-column {
+    display: none;
+  }
+  .btn-sm {
+    justify-content: center;
+    width: 100%;
+  }
+ 
+}
+
+
+/* ---------- Newsletter CSS Styling ---------- */
+/* -------------------------------------------- */
+
+.subscription {
+  background-color: var(--green);
+}
+
+.subscription-wrapper {
+
+  padding: 70px 50px;
+  z-index: 1;
+  width: 100%;
+  top:100px;
+  
+}
+
+
+.flex-fill {
+  -ms-flex: 1 1 auto!important;
+  flex: 1 1 auto!important;
+}
+
+.subscription.bg-white .form-control {
+  border: 1px solid #ebebeb !important;
+}
+
+.subscription-wrapper .form-control {
+  height: 60px;
+  background: rgb(255, 255, 255);
+  border-radius: 45px;
+}
+
+.subscription-wrapper .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  outline: 0;
+  box-shadow: none;
+  
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+
+
+.btn-newsletter {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-weight: 500;
+  border: 2px solid #ffffff;
+  position: relative;
+
+  transition: .3s ease-in;
+  
+}
+
+
+
+
+
+main {
+/*   height: 100vh; */
+  display: grid;
+  place-items: center;
+}
+
+.gallery {
+  /* width: 90vw; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 0.25rem;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &:not(.hero) {
+      cursor: pointer;
+    }
+  }
+
+  & .hero {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (width < 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 175px;
+  }
+}
+
+
+
+
+/* ContactForm.css */
+.partner-container {
+  background-color: #F8F8F8;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 70%;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.inputCss {
+  border: none;
+  border-bottom: 1px solid #00931b; /* Bottom border style */
+  border-radius: 0; /* Remove border radius */
+  outline: none;
+  box-shadow: none;
+  padding: 1rem 0;
+  background-color: transparent;
+  width: 100%;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.inputCss-msg {
+  width: 70%;
+}
+
+.form-label {
+  position: absolute;
+  top: 1.25rem; /* Adjust label position */
+  left: 0;
+  color: #292929; /* Label color */
+  pointer-events: none;
+  transform-origin: 0 0;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.inputCss:focus {
+  border-bottom:1px solid var(--green)!important;
+  transform: translateY(-0.5rem); /* Move the input field up */
+}
+
+.inputCss:focus + .form-label {
+    border-bottom:1px solid var(--green)!important;
+  transform: translateY(-0.5rem) scale(0.85); /* Move and scale the label on focus */
+  opacity: 0
+}
+
+.flex-container {
+  display: flex;
+  width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.flex-item {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--green);
+  margin: 0px 10px;
+  border-radius: 15px;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+
+/* 
+.circle-shadow {
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%; 
+  box-shadow: 0 0 10px rgba(0, 195, 65, 0.3); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.circle-shadow img {
+  width: 100%; 
+  height: auto;
+} */

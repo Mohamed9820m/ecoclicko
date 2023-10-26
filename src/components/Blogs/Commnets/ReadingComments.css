@@ -1,0 +1,35 @@
+.load-more{
+    position: relative;
+    border-radius: 6px;
+    background-color: #e7e7e7;
+    border: 1px solid #e0e0e1;
+    box-sizing: border-box;
+    width: 40%;
+    height: auto;
+ margin-left: 30%;
+ margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 10px;
+    color: #000;
+    font-family: "Source Sans Pro";
+}
+.comments-container1{
+    width: 100%;
+    height: auto;
+    display: grid;
+    margin-left: 25%;
+}
+.userInfo{
+   display: flex;
+   align-items: center;
+   
+}
+.userInfo img{
+    width: 7%;
+    margin-right:2%;
+}
+.userInfo p{
+    font-family: "Source Sans Pro";
+}

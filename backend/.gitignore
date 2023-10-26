@@ -1,0 +1,39 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env files
+.env
+
+# Ignore log files and other local development files
+*.log
+*.sqlite
+*.db
+
+# Ignore any files that may contain sensitive information
+*.key
+*.pem
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore editor/IDE configuration files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore npm debugging logs
+npm-debug.log*
+
+# Ignore yarn debugging logs
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore .env.local (used in some frameworks)
+.env.local
+
+# Ignore package-lock.json (npm package manager)
+package-lock.json
+
+# Ignore yarn.lock (Yarn package manager)
+yarn.lock

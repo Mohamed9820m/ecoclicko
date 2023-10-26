@@ -1,0 +1,16 @@
+.oneComment{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    display: grid;
+}
+.blogImage{
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 8px;
+}
+.blogContent{
+    width: 50%;
+    margin-left: 25%;
+}
+

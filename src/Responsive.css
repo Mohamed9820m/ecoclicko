@@ -1,0 +1,121 @@
+/* Mobile View CSS */
+@media screen and (max-width: 576px), (max-width: 768px) {
+    .nav-icons {
+      justify-content: center;
+      margin-right: 0% !important;
+    }
+    .sm_content-center {
+      justify-content: center;
+    }
+    ._n1CnLn {
+        padding: 1rem 0rem;
+    }
+    .main-banner {
+      padding: 1.5rem!important;
+      height: 90vh;
+    }
+    .main-banner .left-content h2 {
+      font-size: 3rem!important;
+      line-height: 1;
+      padding-right: 0%!important;
+      padding-left: 0%!important;
+      
+    }
+    .main-banner .right-image {
+      display: none;
+    }
+    .testimonial-section .sec-title {
+      margin-bottom: 50px;
+    }
+  
+    .testimonial-block {
+      padding: 0;
+    }
+    .testimonial-block .inner-box {
+      box-shadow: none;
+      border: 2px solid #f1f1f1;
+    }
+  
+    .testimonial-carousel .owl-nav {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .testimonial-carousel .owl-next,
+    .testimonial-carousel .owl-prev {
+      border: 2px solid #f1f1f1;
+    }
+    .testimonial-section .thumb-layer {
+      top: 100%!important;
+
+    }
+    .testimonial-block .inner-box {
+      padding: 60px 50px!important;
+    }
+    .subscription-wrapper {
+      padding: 60px 10px!important;
+    }
+    .masthead {
+      padding-top: 3.5rem!important;
+  }
+  .masthead .masthead-device-mockup .device-wrapper {
+    max-width: 13rem!important;
+}
+.sm-p-y {
+  padding: 2rem;
+}
+.sm-p-y p, .sm-p-y h1 , .sm-p-y h3 {
+  text-align: left!important;
+}
+.image-none {
+  display: none;
+}
+.eye-icon {
+  right: 0.75rem!important;
+}
+.green-line {
+  left: 0px!important;
+  width: 100%!important;
+}
+.link-group a {
+  margin-right: 0%!important;
+    font-size: 14px!important;
+    margin-bottom: 0% !important;
+}
+.container-contact {
+  padding-right: 15%!important;
+    padding-left: 5%!important;
+}
+  }
+
+
+  @media (max-width: 768px) {
+   
+    video {
+      width: 100%; 
+      height: auto;
+    }
+    .sm-video {
+      min-height: 32vh!important;
+    }
+    .about-sections {
+      padding: 0rem 3rem!important;
+    }
+    .form-group {
+      width: 100%;
+   
+    }
+    .flex-container {
+      width: 100%;
+    }
+  }
+
+
+  @media (min-width: 768px) {
+  
+    .sm-video {
+      min-height: 100vh!important;
+    }
+  }

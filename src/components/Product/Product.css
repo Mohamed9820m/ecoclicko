@@ -1,0 +1,86 @@
+.header-area {
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 100%;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .header-area.v3 {
+    background-position: top -300px center;
+    background-size: auto 100%;
+    padding-bottom: 0;
+  }
+  
+  .header-area.v1:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background: url(../../assets/images/header-bg-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    z-index: -1;
+  }
+  
+  .layer {
+    width: 34%; 
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left :0;
+    z-index: 1;
+    margin-left : 64% ;
+    margin-top: -60px !important;
+    transition: transform 0.3s ease; 
+  }
+  .layer:hover {
+    transform: scale(1.1); 
+  }
+
+
+
+.header-area .title {
+    font-size: 3.1rem;
+    font-weight: bold;
+    color: #333333; 
+  }
+
+  .header-area .highlighted-text {
+    color: #fa6e02; 
+    font-weight: bold; 
+  }
+  
+  .header-area p {
+    font-size: 1.20rem;
+    color: #555; 
+  }
+  
+  .header-area .btn {
+    font-size: 1.25rem;
+    padding: 10px 30px;
+  }
+  
+  .header-area .btn-primary {
+    background-color: #157f23; 
+    border: none;
+  }
+  
+  .header-area .btn-primary:hover {
+    background-color: #fa6e02; 
+  }
+  
+  .header-area .btn {
+    margin-top: 30px;
+  }
+  
+
+
+
+
+ 

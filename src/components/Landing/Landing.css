@@ -1,0 +1,208 @@
+:root {
+    --green: #009e00;
+    --black: #000000;
+    --darkgray: #282828;
+    --orange: #fa4f07;
+    --white: #ffffff;
+    --aqua : #7fffd4;
+  }
+
+.show-up {
+  position: relative;
+  z-index: 2;
+}
+
+.main-banner {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--aqua);
+  padding: 4rem;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-banner:after {
+  content: "";
+  background-color: #fbfbfb;
+  background-image: url(../../assets/images/tree.png);
+  opacity: 0.9;
+  transform: scaleX(-1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.main-banner .left-content {
+  margin-right: 15px;
+}
+
+.main-banner .left-content h2 {
+  z-index: 2;
+  position: relative;
+  font-weight: 700;
+  line-height: 70px;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.main-banner .left-content p {
+  margin-bottom: 45px;
+  color: #2a2a2a;
+  font-weight: 400;
+}
+
+.main-banner .left-content .first-button {
+  margin-right: 15px;
+}
+
+.main-banner .left-content .white-button {
+  display: inline-block;
+}
+
+.main-banner .right-image {
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+
+.main-banner .left-content .white-button a {
+  background-color: #4b8ef1;
+  color: #fff !important;
+}
+
+
+
+
+/* Statics & Facts CSS Styling */
+
+
+
+  .count {
+    transform: scale(1.2); 
+    padding: 18px 5px;
+  }
+  
+  
+  
+  
+  .card-text span {
+    color: #000000 !important;
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px) ;
+    animation: fade-in 1s forwards cubic-bezier(0.11, 0, 0.5, 0) ;
+    padding: 50px 0;
+    font-size: 25px !important; 
+   
+  }
+  
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  
+  .box-with-shadow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.092);
+    /* 
+      The first two values (0px) are for horizontal and vertical offset (x and y).
+      The third value (10px) is for the blur radius.
+      The fourth value (rgba(0, 0, 0, 0.5)) defines the shadow color where:
+        - rgba(0, 0, 0) represents black (RGB color)
+        - 0.5 represents the shadow's opacity (0 is fully transparent, 1 is fully opaque)
+    */
+  }
+  
+  
+  .card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 0 85%;
+  }
+  
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 12px;
+  }
+  
+  .card:hover::before,
+  .card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.8s;
+    z-index: -1;
+  }
+  
+  
+  
+    @media screen and (max-width: 768px) {
+      .vh-100
+      .card {
+          padding: 20px;
+    margin: 20px;
+    width: auto !important;
+    height: 270px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      }
+  
+      .card-text span {
+        color: #000000 !important;
+        display: inline-block;
+        opacity: 0;
+        filter: blur(4px) ;
+        animation: fade-in 1s forwards cubic-bezier(0.11, 0, 0.5, 0) ;
+        padding: 55px 0;
+        font-family: 'Borel', Regular400;
+        font-size: 20px; 
+      
+      }
+    }
+  
+  
+    @media screen and (max-width: 992px) {
+      .vh-100
+      .card {
+        padding: 20px;
+  margin: 20px;
+  width: auto !important;
+  height: 270px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    }
+  
+    .card-text span {
+      color: #000000 !important;
+      display: inline-block;
+      opacity: 0;
+      filter: blur(4px) ;
+      animation: fade-in 1s forwards cubic-bezier(0.11, 0, 0.5, 0) ;
+      padding: 55px 0;
+      font-family: 'Borel', Regular400;
+      font-size: 20px; 
+    
+    }
+   
+    } 
+  
+
+
+
+
+
+
+    
+

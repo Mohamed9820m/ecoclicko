@@ -1,0 +1,19 @@
+.dashboard-wrapper {
+    display: flex;
+    
+  }
+  
+  .main-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(242, 242, 242); 
+  }
+  
+  .content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; 
+    border: 1px solid #ccc;
+  }
+  
+  
