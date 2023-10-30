@@ -4,6 +4,9 @@ export { default as sqIMG } from '../assets/images/sq-img.jpg';
 export { default as Logo } from '../assets/images/EC_logo.png';
 
 export { default as MissionIMG } from '../assets/images/test3.png';
+export { default as Mission } from '../assets/images/Mission.png';
+export { default as VisionIMG } from '../assets/images/VisionIMG.png';
+export { default as ValuseIMG } from '../assets/images/ValuseIMG.png';
 
 
 export { default as AppStore } from '../assets/images/app-store-badge.svg';

@@ -19,7 +19,7 @@ const AboutScreen = () => {
         <div className="row align-items-center justify-content-around">
           <div className="col-md-5 col-lg-6 mb-3 mb-md-0 p-4 image-none" data-aos="fade-righ" data-aos-duration="3000">
             {/* Verify the image path and ensure it exists */}
-            <img src={images.MissionIMG} alt="Image" className="rounded image-none" />
+            <img src={images.Mission} alt="Image" className="rounded image-none" />
           </div>
           <div className="col-md-6 col-xl-6 about-sections" data-aos="fade-left" data-aos-duration="3000">
             <div className="row justify-content-center">
@@ -55,7 +55,7 @@ const AboutScreen = () => {
          
            
             
-                <img src={images.MissionIMG} alt="Image" className="rounded image-none"/>
+                <img src={images.VisionIMG} alt="Image" className="rounded image-none"/>
           
         
         
@@ -74,7 +74,7 @@ const AboutScreen = () => {
          
            
             
-                <img src={images.MissionIMG} alt="Image" className="rounded image-none "/>
+                <img src={images.ValuseIMG} alt="Image" className="rounded image-none "/>
           
         
         
@@ -84,7 +84,7 @@ const AboutScreen = () => {
             <div className="col-xl-12 col-lg-11 p-1">
               <div className="my-3">
                
-                <span className="h1 text-uppercase">{t('about_vision_title')}</span>
+                <span className="h1 text-uppercase">{t('about_values_title')}</span>
               </div>
               <p className="fs-4">{t('about_values_paragraph')}</p>
             

@@ -5,6 +5,7 @@ import video from "../../assets/images/demo.mp4";
 import NewsLetter from "../../constants/NewsLetter";
 import ContactUsPage from "../../pages/ContactUsPage";
 import { useTranslation } from "react-i18next";
+import Gif from '../../assets/images/spreads.gif'
 
 
 const ServicesScreen = () => {
@@ -47,9 +48,8 @@ const ServicesScreen = () => {
                     data-color="black"
                   >
                     <div className="screen bg-black">
-                      <video muted autoPlay loop className="videocss">
-                        <source src={video} type="video/mp4" />
-                      </video>
+                     
+                      <img src={Gif} alt="gif" style={{height:'100%'}}/>
                     </div>
                   </div>
                 </div>

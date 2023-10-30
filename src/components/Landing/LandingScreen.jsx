@@ -11,6 +11,7 @@ import ContactForm from "../../constants/ContactForm";
 import ContactUsPage from "../../pages/ContactUsPage";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Product from "../Product/Product";
 const LandingScreen = () => {
   const sqImgStyle = {
     height: "3rem",
@@ -145,37 +146,8 @@ const LandingScreen = () => {
         </div>
       </div>
 
-      {/* Mission Section */}
-
-      <Container>
-        <div className="row align-items-center justify-content-around">
-          <div className="col-md-5 col-lg-6 mb-3 mb-md-0 p-4">
-            <img
-              src={images.MissionIMG}
-              alt="Image"
-              className="rounded aos-init aos-animate"
-              data-aos="fade-right"
-            />
-          </div>
-          <div className="col-md-6 col-xl-6 p-5" data-aos="fade-left">
-            <div className="row justify-content-center">
-              <div className="col-xl-12 col-lg-11 p-1">
-                <div className="my-3">
-                  <span className="text-uppercase h1">{t('Home_mission_title')}</span>
-                </div>
-                <p className="fs-4">
-                 {t('Home_mission')}
-                </p>
-                <div className="my-5">
-                  <Link to="/about">
-                  <button className="mainBtn">{t('Home_LearnMore')}</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
+      {/* product Section */}
+      <Product/>
 
       {/* Quote Section */}
 

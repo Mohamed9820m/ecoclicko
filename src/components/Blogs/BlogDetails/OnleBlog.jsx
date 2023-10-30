@@ -7,6 +7,7 @@ import Like from "../Likes/Like";
 import Cookies from 'js-cookie';
 import jwt_decode from 'jwt-decode'
 import moment from "moment";
+import { Helmet } from "react-helmet-async";
 
 
 function OneBlog() {
@@ -65,6 +66,11 @@ function OneBlog() {
  
   return (
     <>
+            <Helmet>
+    <title>{OneBlog[0]?.blogTitle||"oneBlog"}</title>
+    <meta name="description" content={OneBlog[0]?.blogContent}/>
+    <link rel='canonical' href='/OneBlog' />
+   </Helmet>
     <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-8">
