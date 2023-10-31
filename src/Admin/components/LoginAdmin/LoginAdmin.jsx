@@ -1,39 +1,45 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import test1 from '../../../assets/images/test3.png';
 import BubblyButton from "../../../constants/BubblyButton";
-// import '../../components/Login/Login.css';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Cookies from 'js-cookie'; 
-import jwt_decode from 'jwt-decode';
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import PrivateRoutes from '../PrivateRoutes';
 
 function LoginAdmin() {
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState('');
+    const [auth,setAuth]=useState('')
+    const [reload,setReload]=useState(false)
+    const email="nissaf.sleymi@gmail.com"
+    const password='a'
     const navigate = useNavigate();
     const togglePasswordVisibility = () => {
         setShowPassword((prevShowPassword) => !prevShowPassword);
       };
   
     const passwordInputType = showPassword ? 'text' : 'password';
-    const handleLogin = async () => {
-        try{
-            const response =await axios.get("https://ecoclicko.onrender.com/api/Admin")
-            const data=response.data[0]
-            data.adminEmail===userEmail&&data.adminPassword===userPassword?navigate('/dashboard'):Swal.fire({
-                icon: 'warning',
-                title: 'Check your email/password',
-                text:'please check your email or your password is wrong '
-              });
-        }catch(err){
-            console.log(err)
-        }
-
-      
-      };
+    
+    const handleLogin = () => {
+      if (email === userEmail && password === userPassword) {
+        localStorage.setItem('auth', true);
+        setAuth(true)
+        setReload(!reload)
+        setTimeout(() => {
+          navigate("/dashboard")
+        }, 2000);
+        
+      } else {
+        
+        Swal.fire({
+          icon: 'warning',
+          title: 'Check your email/password',
+          text: 'Please check your email or your password is wrong.',
+        });
+      }
+    };
+   
   return (
     <section className="login-section vh-xxl-100">
     <div className="container h-100 d-flex px-0 px-sm-4">
@@ -78,7 +84,7 @@ function LoginAdmin() {
                     </div>
 
 
-                    <div className='button' onClick={handleLogin}>
+                    <div className='button' onClick={()=>{handleLogin()}}>
                       <BubblyButton text="Login"/>
                     </div>
                   </form>
@@ -89,6 +95,7 @@ function LoginAdmin() {
         </div>
       </div>
     </div>
+    <PrivateRoutes reload={reload}/>
   </section>
   )
 }

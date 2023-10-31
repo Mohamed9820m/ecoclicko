@@ -12,7 +12,7 @@ export { default as ValuseIMG } from '../assets/images/ValuseIMG.png';
 export { default as AppStore } from '../assets/images/app-store-badge.svg';
 export { default as googlePlay } from '../assets/images/googlePlaystore.png';
 
-export { default as partnershipIMG } from '../assets/p.jpg';
+export { default as partnershipIMG } from '../assets/p.png';
 
 
 export { default as partnerOne } from '../assets/images/partners/Partner-1.jpg';

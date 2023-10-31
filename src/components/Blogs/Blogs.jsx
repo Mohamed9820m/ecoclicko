@@ -32,7 +32,7 @@ const Blogs = () => {
     <>
       <div className="album py-5 bg-body-tertiary">
         <div className="container">
-          <div style={{ backgroundColor: '#e7e7e7' }}>
+          <div >
             <select
               className="category"
               id="category"

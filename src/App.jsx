@@ -28,6 +28,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Profile from "./components/MyProfile/Profile";
 import LoginAdmin from './Admin/components/LoginAdmin/LoginAdmin'
+import PrivateRoutes from "./Admin/components/PrivateRoutes";
 
 const App = () => {
   useEffect(() => {
@@ -74,10 +75,12 @@ const App = () => {
 
           {/* Admin */}
           <Route path="/logDashboard" element={<LoginAdmin />} />
+          <Route element={<PrivateRoutes />}>
           <Route path="/dashboard/blog" element={<BlogsPage />} />
           <Route path="/dashboard/comments" element={<Comments />} />
           <Route path="/dashboard" element={<AddBlog />} />
           <Route path="/dashboard/users" element={<Users />} />
+            </Route>
         </Routes>
         <Footer />
       </Router>

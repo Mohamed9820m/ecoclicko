@@ -8,7 +8,7 @@ import ReactQuill from 'react-quill'; // Import ReactQuill
 function AddBlog() {
   const [blogTitle, setTitle] = useState("");
   const [blogContent, setContent] = useState("");
-  const [blogCategory, setCategory] = useState("");
+  const [blogCategory, setCategory] = useState("Case Study");
   const [selectedImage, setSelectedImage] = useState(null);
 
   const cloud_name = "djl7btyt5";
@@ -65,6 +65,8 @@ function AddBlog() {
       console.error("Error uploading image:", error);
     }
   };
+
+  console.log('blogCategory',blogCategory);
 
   const modules = {
     toolbar: [

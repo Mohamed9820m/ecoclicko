@@ -5,7 +5,7 @@ import video from "../../assets/images/demo.mp4";
 import NewsLetter from "../../constants/NewsLetter";
 import ContactUsPage from "../../pages/ContactUsPage";
 import { useTranslation } from "react-i18next";
-import Gif from '../../assets/images/spreads.gif'
+import design from '../../assets/images/design.png'
 
 
 const ServicesScreen = () => {
@@ -40,19 +40,7 @@ const ServicesScreen = () => {
             </div>
             <div className="col-lg-6" data-aos="fade-left">
               <div className="masthead-device-mockup">
-                <div className="device-wrapper">
-                  <div
-                    className="device"
-                    data-device="iPhoneX"
-                    data-orientation="portrait"
-                    data-color="black"
-                  >
-                    <div className="screen bg-black">
-                     
-                      <img src={Gif} alt="gif" style={{height:'100%'}}/>
-                    </div>
-                  </div>
-                </div>
+                      <img src={design} alt="design" style={{marginTop:'-50%'}} />
               </div>
             </div>
           </div>
