@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Sidebar from '../../../Admin/components/Sidebar';
-import '../../../Admin/Dashbord.css';
+import "react-quill/dist/quill.snow.css"; // Import Quill styles
 import axios from "axios";
 import "./AddBlog.css";
+import ReactQuill from 'react-quill'; // Import ReactQuill
 
 function AddBlog() {
   const [blogTitle, setTitle] = useState("");
@@ -23,7 +24,7 @@ function AddBlog() {
     setContent("");
     setCategory("");
     setSelectedImage(null);
-    document.querySelector(".userProfileImageUpload2").value = null; 
+    document.querySelector(".userProfileImageUpload2").value = null;
   };
 
   const createBlog = async () => {
@@ -44,7 +45,7 @@ function AddBlog() {
 
       if (response.ok) {
         const data = await response.json();
-        
+
         axios.post("https://ecoclicko.onrender.com/api/blog/addBlog/1", {
           blogTitle,
           blogContent,
@@ -53,7 +54,7 @@ function AddBlog() {
         }).then((res) => {
           console.log("Posted data ==>", res);
           alert("Blog created successfully!");
-          resetForm(); 
+          resetForm();
         }).catch((error) => {
           console.log("Post error ==>", error);
         });
@@ -63,7 +64,31 @@ function AddBlog() {
     } catch (error) {
       console.error("Error uploading image:", error);
     }
-  }
+  };
+
+  const modules = {
+    toolbar: [
+      [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+      [{ size: [] }],
+      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+      [{ 'list': 'ordered' }, { 'list': 'bullet' },
+      { 'indent': '-1' }, { 'indent': '+1' }],
+      ['link', 'image'],
+      ['clean'],
+      [{ 'color': [] }]
+    ],
+  };
+
+  const formats = [
+    'header', 'font', 'size',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet', 'indent',
+    'link', 'image','color'
+  ];
+
+  const handleColorChange = (color) => {
+    setTextColor(color); 
+  };
 
   return (
     <div className="dashboard-wrapper">
@@ -76,32 +101,57 @@ function AddBlog() {
             </div>
             <div className="addBlogForm">
               <form className="addBlogFormInputs">
-                <input className="addBlogEachInput" placeholder="Title" value={blogTitle} onChange={(e) => { setTitle(e.target.value) }} required></input>
-                      <select
-          className="addBlogEachInput"
-          id="category"
-          name="category"
-          onChange={(e) => { setCategory(e.target.value) }}
-          value={blogCategory}
-        >
-          <option value="Case Study ">Case Study </option>
-          <option value="Education Learning">Education Learning</option>
-        </select>            
-                <textarea className="addBlogEachInput" placeholder="Content" value={blogContent} onChange={(e) => { setContent(e.target.value) }} required></textarea>
+                <input
+                  className="addBlogEachInput"
+                  placeholder="Title"
+                  value={blogTitle}
+                  onChange={(e) => { setTitle(e.target.value) }}
+                  required
+                ></input>
+                <select
+                  className="addBlogEachInput"
+                  id="category"
+                  name="category"
+                  onChange={(e) => { setCategory(e.target.value) }}
+                  value={blogCategory}
+                >
+                  <option value="Case Study">Case Study</option>
+                  <option value="Education Learning">Education Learning</option>
+                </select>
+                <ReactQuill
+                  theme="snow"
+                  value={blogContent}
+                  onChange={setContent}
+                  modules={modules}
+                  formats={formats}
+                  placeholder="Write your blog content here..."
+                />
                 <div className="userProfileImageUpload">
-                  <input type="file" id="image" className="userProfileImageUpload2" onChange={handleImageChange} required />
+                  <input
+                    type="file"
+                    id="image"
+                    className="userProfileImageUpload2"
+                    onChange={handleImageChange}
+                    required
+                  />
                   {selectedImage && (
-                    <img className="userProfileImagePalce" src={selectedImage} alt="SelectedImage" />
+                    <img
+                      className="userProfileImagePalce"
+                      src={selectedImage}
+                      alt="SelectedImage"
+                    />
                   )}
                 </div>
-                <button className="addBlogSubmitButton" type="button" onClick={createBlog}>Submit</button>
+                <button className="addBlogSubmitButton" type="button" onClick={createBlog}>
+                  Submit
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default AddBlog;

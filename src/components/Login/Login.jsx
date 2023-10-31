@@ -12,6 +12,8 @@ function Login() {
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // New state for the loader
+
   const navigate = useNavigate();
 
   const passwordInputType = showPassword ? 'text' : 'password';
@@ -26,12 +28,17 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Show loader on login request
+
 
     try {
       const response = await axios.post('https://ecoclicko.onrender.com/api/Users/login', {
         userEmail,
         userPassword,
       });
+
+      setIsLoading(false); // Hide loader after response
+
 
       if (response.data && response.data.token) {
         const token = response.data.token;
@@ -69,6 +76,8 @@ function Login() {
         });
       }
     } catch (error) {
+      setIsLoading(false); // Hide loader on error
+
       console.error('Error logging in:', error);
       if (error.response) {
         if (error.response.status === 404) {
@@ -182,8 +191,13 @@ function Login() {
                       </div>
 
                       
-                      <button type='sumbit' className='mainBtn d-flex mx-auto' onClick={handleLogin}>Login →</button>
-                    
+<button type="submit" className="mainBtn d-flex mx-auto" onClick={handleLogin}>
+                        {isLoading ? ( // Show loader if isLoading state is true
+                          <span className="loader"></span>
+                        ) : (
+                          'Login →'
+                        )}
+                      </button>                    
                     </form>
                   </div>
                 </div>

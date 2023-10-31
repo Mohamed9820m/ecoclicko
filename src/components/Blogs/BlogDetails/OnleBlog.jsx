@@ -8,6 +8,8 @@ import Cookies from 'js-cookie';
 import jwt_decode from 'jwt-decode'
 import moment from "moment";
 import { Helmet } from "react-helmet-async";
+import parse from 'html-react-parser';
+
 
 
 function OneBlog() {
@@ -93,9 +95,11 @@ function OneBlog() {
               </div>
               </figure>
                      
-                        <section class="mb-5 pt-5">
-                            <p class="fs-5 mb-4">{OneBlog[0]?.blogContent}</p>
-                           </section>
+              <section class="mb-5 pt-5">
+                <div>
+                  {typeof OneBlog[0]?.blogContent === 'string' ? parse(OneBlog[0]?.blogContent) : null}
+                </div>
+              </section>
                            
 
                     </article>

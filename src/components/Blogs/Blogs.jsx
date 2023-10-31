@@ -47,7 +47,7 @@ const Blogs = () => {
           </div>
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {filteredData.map((el) => (
-              <BlogDetails key={el.id} data={el} />
+              <BlogDetails key={el.id} data= {el} /> 
             ))}
           </div>
         </div>

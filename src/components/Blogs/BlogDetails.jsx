@@ -9,6 +9,8 @@ import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 import { useState } from "react";
 import UpdateBlog from "../Blogs/UpdateBlog/UpdateBlog";
+import parse from 'html-react-parser';
+
 
 
 function BlogDetails({ data,setReload,relode }) {
@@ -73,7 +75,7 @@ function BlogDetails({ data,setReload,relode }) {
           <div className="card-body">
             <h3>{data.blogTitle}</h3>
             <p className="card-text" style={truncateStyle}>
-              {data.blogContent}
+              {parse(data.blogContent)}
             </p>
           </div>
         </div>
