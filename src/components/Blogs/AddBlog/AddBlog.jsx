@@ -86,10 +86,7 @@ function AddBlog() {
     'link', 'image','color'
   ];
 
-  const handleColorChange = (color) => {
-    setTextColor(color); 
-  };
-
+  
   return (
     <div className="dashboard-wrapper">
       <Sidebar />
