@@ -10,6 +10,7 @@ function AddBlog() {
   const [blogContent, setContent] = useState("");
   const [blogCategory, setCategory] = useState("Case Study");
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isLoading, setLoading] = useState(false); 
 
   const cloud_name = "djl7btyt5";
   const upload_preset = "mohamedha";
@@ -22,7 +23,7 @@ function AddBlog() {
   const resetForm = () => {
     setTitle("");
     setContent("");
-    setCategory("");
+    setCategory("Case Study"); // Setting a default category value
     setSelectedImage(null);
     document.querySelector(".userProfileImageUpload2").value = null;
   };
@@ -32,6 +33,8 @@ function AddBlog() {
       alert("Please select an image");
       return;
     }
+
+    setLoading(true); // Set loading to true when the process starts
 
     const formData = new FormData();
     formData.append("file", document.querySelector(".userProfileImageUpload2").files[0]);
@@ -57,16 +60,18 @@ function AddBlog() {
           resetForm();
         }).catch((error) => {
           console.log("Post error ==>", error);
+        }).finally(() => {
+          setLoading(false); // Set loading to false when the process ends
         });
       } else {
         console.log("Error uploading image.");
+        setLoading(false); // Set loading to false on error
       }
     } catch (error) {
       console.error("Error uploading image:", error);
+      setLoading(false); // Set loading to false on error
     }
   };
-
-  console.log('blogCategory',blogCategory);
 
   const modules = {
     toolbar: [
@@ -75,7 +80,7 @@ function AddBlog() {
       ['bold', 'italic', 'underline', 'strike', 'blockquote'],
       [{ 'list': 'ordered' }, { 'list': 'bullet' },
       { 'indent': '-1' }, { 'indent': '+1' }],
-      ['link', 'image'],
+      ['link'],
       ['clean'],
       [{ 'color': [] }]
     ],
@@ -85,10 +90,9 @@ function AddBlog() {
     'header', 'font', 'size',
     'bold', 'italic', 'underline', 'strike', 'blockquote',
     'list', 'bullet', 'indent',
-    'link', 'image','color'
+    'link','color'
   ];
 
-  
   return (
     <div className="dashboard-wrapper">
       <Sidebar />
@@ -142,7 +146,11 @@ function AddBlog() {
                   )}
                 </div>
                 <button className="addBlogSubmitButton" type="button" onClick={createBlog}>
-                  Submit
+                  {isLoading ? (
+                    <span className="loader"></span>
+                  ) : (
+                    'Submit'
+                  )}
                 </button>
               </form>
             </div>
