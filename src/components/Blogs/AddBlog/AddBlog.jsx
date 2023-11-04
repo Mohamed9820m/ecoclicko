@@ -23,7 +23,7 @@ function AddBlog() {
   const resetForm = () => {
     setTitle("");
     setContent("");
-    setCategory("Case Study"); // Setting a default category value
+    setCategory("Case Study"); 
     setSelectedImage(null);
     document.querySelector(".userProfileImageUpload2").value = null;
   };
@@ -34,7 +34,7 @@ function AddBlog() {
       return;
     }
 
-    setLoading(true); // Set loading to true when the process starts
+    setLoading(true); 
 
     const formData = new FormData();
     formData.append("file", document.querySelector(".userProfileImageUpload2").files[0]);
@@ -61,15 +61,15 @@ function AddBlog() {
         }).catch((error) => {
           console.log("Post error ==>", error);
         }).finally(() => {
-          setLoading(false); // Set loading to false when the process ends
+          setLoading(false); 
         });
       } else {
         console.log("Error uploading image.");
-        setLoading(false); // Set loading to false on error
+        setLoading(false); 
       }
     } catch (error) {
       console.error("Error uploading image:", error);
-      setLoading(false); // Set loading to false on error
+      setLoading(false); 
     }
   };
 
